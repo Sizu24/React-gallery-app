@@ -1,4 +1,5 @@
 import React from 'react';
+import {Router, Route, NavLink} from 'react-router-dom';
 
 const NavBar = ()=>{
 
@@ -7,9 +8,12 @@ const NavBar = ()=>{
             <ul>
                 <li><button>Cats</button></li>
                 <li><button>Dogs</button></li>
-                <li><button>Computers</button></li>
+                <li><button>Buttons</button></li>
             </ul>
         </nav>
+
+
+
 
     );
 }

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 class SearchForm extends Component {
-    constructor(){
-        super();
-    }
+
     // search form
     // handle submit
     // take input and put into variable
@@ -12,16 +10,15 @@ class SearchForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        const textInput = React.createRef();
         this.props.searchResults();
-
-
     }
     
     render(){
         return(
-            <form onSubmit={ this.handleSubmit }>
+            <form onSubmit={ this.handleSubmit.bind(this) }>
                 <label>Search:
-                    <input type="text" placeholder="Search" name="search" />
+                    <input type="text" ref={this.textInput} placeholder="Search" name="search" />
                 </label>
                 <input type="submit" value="submit" />
             </form>
