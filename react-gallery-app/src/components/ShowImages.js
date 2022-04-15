@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ShowImages = ()=> {
+const ShowImages = props => {
     return(
-        <div className="photos-container">
-            <h2>Results</h2>
-            <img src="" alt="" />
-        </div>
+        <li>
+            <img src={`https://live.staticflickr.com/${props.server}/${props.id}_${props.secret}_w.jpg`} alt="" />
+        </li>
     )
-    
+
+
 }
 
 export default ShowImages;

@@ -2,23 +2,21 @@ import React, { Component } from 'react';
 
 class SearchForm extends Component {
 
-    // search form
-    // handle submit
-    // take input and put into variable
-    // see if variable matches value of json data
-    // send that value to photos component as prop
+    // Variable to store ref data from input element inside the form
+    textInput = React.createRef();
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const textInput = React.createRef();
-        this.props.searchResults();
+        // Runs the searchGifs method in App.js, and sends it the value from the ref in the form
+        this.props.searchResults(this.textInput.current.value);
     }
     
     render(){
         return(
             <form onSubmit={ this.handleSubmit.bind(this) }>
                 <label>Search:
-                    <input type="text" ref={this.textInput} placeholder="Search" name="search" />
+                    {/** Ref references this <input> and sends the value to textInput */}
+                    <input type="text" ref={ this.textInput } placeholder="Search" name="search" />
                 </label>
                 <input type="submit" value="submit" />
             </form>

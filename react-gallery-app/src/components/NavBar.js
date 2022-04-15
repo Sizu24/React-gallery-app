@@ -6,9 +6,9 @@ const NavBar = ()=>{
     return(
         <nav className="main-nav">
             <ul>
-                <li><button>Cats</button></li>
-                <li><button>Dogs</button></li>
-                <li><button>Buttons</button></li>
+                <li><NavLink to="/cats"><button>Cats</button></NavLink></li>
+                <li><NavLink to="dogs"><button>Dogs</button></NavLink></li>
+                <li><NavLink to="cars"><button>Cars</button></NavLink></li>
             </ul>
         </nav>
 
