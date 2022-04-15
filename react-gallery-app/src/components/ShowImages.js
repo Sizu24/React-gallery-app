@@ -1,5 +1,7 @@
 import React from 'react';
 
+// displayUrl = `https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg`;
+
 const ShowImages = props => {
     return(
         <li>

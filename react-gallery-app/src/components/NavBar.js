@@ -12,9 +12,6 @@ const NavBar = ()=>{
             </ul>
         </nav>
 
-
-
-
     );
 }
 

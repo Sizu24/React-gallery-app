@@ -10,7 +10,7 @@ const ImageContainer = props => {
         gifs = results.map( gif =>{
             <ShowImages server={gif.server} id={gif.id} secret={gif.secret} key={gif.id} />
         })
-        console.log(gifs);
+
     }else{
         gifs = <NoGifs />
     }
@@ -18,7 +18,7 @@ const ImageContainer = props => {
     return (
 
         <div className="images-container">
-                {console.log(gifs)}
+            <h3>Results</h3>
             <ul>
                 {
                     gifs

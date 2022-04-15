@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Header from './Header';
+import NavBar from './NavBar';
 
 class SearchForm extends Component {
 
@@ -13,13 +15,16 @@ class SearchForm extends Component {
     
     render(){
         return(
-            <form onSubmit={ this.handleSubmit.bind(this) }>
-                <label>Search:
-                    {/** Ref references this <input> and sends the value to textInput */}
-                    <input type="text" ref={ this.textInput } placeholder="Search" name="search" />
-                </label>
-                <input type="submit" value="submit" />
-            </form>
+            <div>
+                <form onSubmit={ this.handleSubmit.bind(this) }>
+                    <label>Search:
+                        {/** Ref references this <input> and sends the value to textInput */}
+                        <input type="text" ref={ this.textInput } placeholder="Search" name="search" />
+                    </label>
+                    <input type="submit" value="submit" />
+                </form>
+                <NavBar />
+            </div>
         );
     }
 }
