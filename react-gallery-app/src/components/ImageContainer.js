@@ -17,14 +17,16 @@ const ImageContainer = props => {
 
     return (
 
-        <div className="images-container">
-            <h3>Results</h3>
+        <div className="photo-container">
+            <h2>Results</h2>
             <ul>
                 {
                     gifs
                 }
             </ul>
         </div>
+ 
+
 
 
     );
