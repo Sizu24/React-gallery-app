@@ -2,6 +2,8 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
+  background-color: #282c34;
+
 }
 
 h2 {
@@ -91,6 +93,28 @@ input {
 
 .photo-container .not-found {
   width: 100%;
+}
+
+.home-button{
+  font-size: 2em;
+  display: block;
+  background: #438bbd;
+  border-radius: 3px;
+  border:none;
+  padding: 10px 25px;
+  color: #fff;
+}
+
+.home-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #282c34;
+}
+
+.home-button:hover {
+  background-color: #275270;
 }
 
 @media only screen and (max-width: 767px)  {

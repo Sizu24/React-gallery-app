@@ -5,7 +5,9 @@ import SearchForm from './SearchForm';
 const Home = ()=>{
     
     return(
-        <Link to="/search" element={<SearchForm />}><button>Let's search some gifs!</button></Link>
+        <div className="home-container">
+            <Link to="/search" element={<SearchForm />}><button className="home-button">Let's search some gifs!</button></Link>
+        </div>
     );
 }
 
