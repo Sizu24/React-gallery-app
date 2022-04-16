@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, useParams, useNavigate } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import SearchForm from './SearchForm';
@@ -7,7 +7,6 @@ import ImageContainer from './ImageContainer';
 import NotFound from './NotFound';
 import apiKey from '../config';
 import axios from 'axios';
-import ShowImages from './ShowImages';
 
 const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_';
 
@@ -40,7 +39,7 @@ class App extends Component {
         <Routes>
           <Route path="/" element={<Home /> } />
           <Route path="/search" element={<SearchForm searchResults={ this.searchGifs } /> } />
-          <Route path="/images" element={<ImageContainer imageList={ this.state.gifs } />} />
+          <Route path="/search/:name" element={<ImageContainer imageList={ this.state.gifs } />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         </div>

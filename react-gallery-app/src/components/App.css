@@ -95,6 +95,17 @@ input {
   width: 100%;
 }
 
+.not-found{
+  color: #fff;
+}
+
+.home-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  background-color: #282c34;
+}
+
 .home-button{
   font-size: 2em;
   display: block;
@@ -105,13 +116,6 @@ input {
   color: #fff;
 }
 
-.home-container{
-  height: 100vh;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  background-color: #282c34;
-}
 
 .home-button:hover {
   background-color: #275270;
