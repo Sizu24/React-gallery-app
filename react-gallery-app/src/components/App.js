@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Routes, Route, BrowserRouter, useParams, useNavigate } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import SearchForm from './SearchForm';
@@ -8,13 +8,12 @@ import NotFound from './NotFound';
 import apiKey from '../config';
 import axios from 'axios';
 
-const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_';
+const url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_';
 
 class App extends Component {
 
   constructor(){
     super();
-    this.searchGifs = this.searchGifs.bind(this);
     this.key = apiKey;
     this.state = {
       gifs: []
@@ -28,8 +27,9 @@ class App extends Component {
       .catch(error => { console.log("Nothing was found", error)})
   }
 
-  componentDidMount(){
-    <ImageContainer imageList={ this.searchGifs() } />
+  // test method
+  showConsole = (text)=>{
+    console.log(text);
   }
 
   render() {

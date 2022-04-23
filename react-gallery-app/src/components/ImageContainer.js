@@ -1,23 +1,22 @@
 import React from 'react';
 import ShowImages from './ShowImages';
 import NoGifs from './NoGifs';
+import SearchForm from './SearchForm';
 
 const ImageContainer = props => {
     let results = props.imageList;
     let gifs = [];
 
     if(results.length > 0){
-        gifs = results.map( gif =>{
-            <ShowImages server={gif.server} id={gif.id} secret={gif.secret} key={gif.id} />
-        })
-
+        gifs = results.map( gif =>(<ShowImages server={gif.server} id={gif.id} secret={gif.secret} key={gif.id} />));
     }else{
-        gifs = <NoGifs />
+        gifs = <NoGifs />;
     }
 
     return (
 
         <div className="photo-container">
+            <SearchForm />
             <h2>Results</h2>
             <ul>
                 {
@@ -25,10 +24,6 @@ const ImageContainer = props => {
                 }
             </ul>
         </div>
- 
-
-
-
     );
 }
 

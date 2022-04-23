@@ -11,8 +11,6 @@ const ShowImages = props => {
             />
         </li>
     )
-
-
 }
 
 export default ShowImages;
