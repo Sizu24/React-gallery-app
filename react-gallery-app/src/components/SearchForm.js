@@ -20,25 +20,25 @@ class SearchForm extends Component {
         this.props.searchResults(this.textInput.current.value);
         console.log(this.textInput.current.value);
         e.currentTarget.reset();
+
     }
 
     // Get the typed characters in the search input
     onInputType = e =>{
         this.setState( { inputValue: e.target.value } );
-        console.log(this.state.inputValue);
     }
     
     render(){
         return(
             <div>
-                <form className="search-form" onSubmit={ this.handleSubmit }>
+                <form className="search-form" onSubmit={ this.handleSubmit.bind(this) }>
 
                     {/** Ref references this <input> and sends the value to textInput */}
                     <input type="text"
                         ref={ this.textInput }
                         placeholder="Search"
                         name="search"
-                        onChange={this.onInputType}
+                        onChange={this.onInputType.bind(this)}
                     />
 
                     <button type="submit" className="search-button">
