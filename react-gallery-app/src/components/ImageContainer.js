@@ -16,7 +16,7 @@ const ImageContainer = props => {
     return (
 
         <div className="photo-container">
-            <SearchForm />
+            <SearchForm searchResults={ props.searchResults }/>
             <h2>Results</h2>
             <ul>
                 {

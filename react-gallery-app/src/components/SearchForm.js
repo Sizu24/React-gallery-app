@@ -3,19 +3,19 @@ import { useNavigate } from 'react-router-dom';
 
 const SearchForm = (props)=> {
 
-
+    // Variable to store ref data from input element inside the form
     let textInput = React.createRef();
     let navigate = useNavigate();
+    // Text input value from search form
     let inputValue = "";
-   
-    // Variable to store ref data from input element inside the form
-    
+       
     const handleSubmit = (e) => {
         e.preventDefault();
+        // Navigate to url that matches user search value
         navigate(`/search/${inputValue}`)
         console.log(textInput.current.value);
         // Runs the searchGifs method in App.js, and sends it the value from the ref in the form
-        props.searchResults(inputValue);
+        props.searchResults(textInput.current.value);
         e.currentTarget.reset();
     }
 

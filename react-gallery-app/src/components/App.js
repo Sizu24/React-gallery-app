@@ -39,7 +39,7 @@ class App extends Component {
         <Routes>
           <Route path="/" element={<Home /> } />
           <Route path="/search" element={<SearchForm searchResults={ this.searchGifs } /> } />
-          <Route path="/search/:name" element={<ImageContainer imageList={ this.state.gifs } />} />
+          <Route path="/search/:name" element={<ImageContainer imageList={ this.state.gifs } searchResults={ this.searchGifs }/>} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         </div>
